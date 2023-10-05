@@ -1,0 +1,39 @@
+﻿@model Modelo_Registro
+@{
+    ViewData["Title"] = "Crear un Usuario";
+}
+
+<h1>Registro</h1>
+
+<h5>
+    Ingrese sus datos
+</h5>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<form>
+
+    <div class="mb-3">
+        <label asp-for="Usuario" class="form-label"></label>
+        <input type="text" asp-for="Usuario" class="form-control" />
+        <span asp-validation-for="Usuario" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Correo" class="form-label"></label>
+        <input type="text" asp-for="Correo" class="email" />
+        <span asp-validation-for="Correo" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Contraseña" class="form-label"></label>
+        <input type="text" asp-for="Contraseña" class="password" />
+        <span asp-validation-for="Contraseña" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar</button>
+
+</form>
+
+
+
